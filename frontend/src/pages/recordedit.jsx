@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
 
 const Recordedit = () => {
+  const BASE_URL = "https://yardstick-finance-tracker-2.onrender.com";
   const [recdet, setrecdet] = useState({
     description: "",
     amount: "",
@@ -21,7 +22,7 @@ const Recordedit = () => {
     const fetchdata = async () => {
       try {
         const res = await axios.get(
-          `https://finance-tracker-by-jk1.onrender.com/getrecordbyid/${id}`
+          `${BASE_URL}/getrecordbyid/${id}`
         );
         setrecdet(res.data);
         console.log(res.data);
@@ -46,7 +47,7 @@ const Recordedit = () => {
       const formatteddate = convertToDDMMYYYY(recdet.date);
       setrecdet((prev) => ({ ...prev, date: formatteddate }));
 
-      await axios.put(`https://finance-tracker-by-jk1.onrender.com/editrecord/${id}`, recdet)
+      await axios.put(`${BASE_URL}//editrecord/${id}`, recdet)
       toast.success("Successfully Added expense!");
       setTimeout(() => navigate("/"),2000);
       console.log("edited");
