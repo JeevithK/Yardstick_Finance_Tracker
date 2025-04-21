@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json());
 
 app.use(cors({
-  origin: "https://finance-tracker-by-jk1.onrender.com", // your frontend URL
+  origin: "https://yardstick-finance-tracker-2.onrender.com", 
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true,
 }));
