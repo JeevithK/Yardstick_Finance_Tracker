@@ -46,7 +46,7 @@ const Recorddelete = () => {
             <label className="block text-gray-700">Description:</label>
             <input
               type="text"
-              value={recdet.description || ""}
+              value={recdet.description}
               disabled
               className="w-full border rounded-lg px-3 py-2 bg-gray-100"
             />
@@ -56,7 +56,7 @@ const Recorddelete = () => {
             <label className="block text-gray-700">Amount:</label>
             <input
               type="number"
-              value={recdet.amount || ""}
+              value={recdet.amount}
               disabled
               className="w-full border rounded-lg px-3 py-2 bg-gray-100"
             />
@@ -66,7 +66,7 @@ const Recorddelete = () => {
             <label className="block text-gray-700">Category:</label>
             <input
               type="text"
-              value={recdet.category || ""}
+              value={recdet.category}
               disabled
               className="w-full border rounded-lg px-3 py-2 bg-gray-100"
             />
@@ -76,7 +76,7 @@ const Recorddelete = () => {
             <label className="block text-gray-700">Date:</label>
             <input
               type="date"
-              value={recdet.date || ""}
+              value={recdet.date}
               disabled
               className="w-full border rounded-lg px-3 py-2 bg-gray-100"
             />
@@ -86,7 +86,7 @@ const Recorddelete = () => {
             <label className="block text-gray-700">Payment Method:</label>
             <input
               type="text"
-              value={recdet.paymentmethod || ""}
+              value={recdet.paymentmethod}
               disabled
               className="w-full border rounded-lg px-3 py-2 bg-gray-100"
             />
