@@ -13,7 +13,7 @@ const Recorddelete = () => {
     const fetchdata = async () => {
       try {
         const res = await axios.get(
-          `https://finance-tracker-by-jk1.onrender.com/getrecord/${id}`
+          `https://finance-tracker-by-jk1.onrender.com/getrecordbyid/${id}`
         );
         setrecdet(res.data);
       } catch (err) {
