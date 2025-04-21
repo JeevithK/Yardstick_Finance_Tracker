@@ -30,7 +30,7 @@ const Recordform = ({ fetchRecords }) => {
         setFormData((prev) => ({ ...prev, date: formatteddate }));
 
         const postrecord = await axios.post(
-        "http://localhost:5001/createrecord",
+        "https://finance-tracker-by-jk1.onrender.com/createrecord",
         formData
         );
 
