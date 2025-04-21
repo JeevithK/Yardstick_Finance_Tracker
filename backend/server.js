@@ -9,12 +9,12 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 app.use(cors());
-app.post("/createrecord", (req, res) => {
+app.post("https://yardstick-finance-tracker-2.onrender.com/createrecord", (req, res) => {
   const newrecord = recordmodel.create(req.body);
   res.status(202).json({ message: "Done Created the record" });
 });
 
-app.get("/getrecordbyid/:id", async(req, res) => {
+app.get("https://yardstick-finance-tracker-2.onrender.com/getrecordbyid/:id", async(req, res) => {
     try {
         const id = req.params.id;
         const record = await recordmodel.findOne({ _id:id });
@@ -26,7 +26,7 @@ app.get("/getrecordbyid/:id", async(req, res) => {
     }
 });
 
-app.get("/getallrecord", async (req, res) => {
+app.get("https://yardstick-finance-tracker-2.onrender.com/getallrecord", async (req, res) => {
   try {
     const allrecord = await recordmodel.find({});
     res.status(202).json(allrecord);
@@ -37,7 +37,7 @@ app.get("/getallrecord", async (req, res) => {
   }
 });
 
-app.put("/editrecord/:id", async (req, res) => {
+app.put("https://yardstick-finance-tracker-2.onrender.com/editrecord/:id", async (req, res) => {
   try {
     const updatedRecord = await recordmodel.findByIdAndUpdate(
       req.params.id,
@@ -51,7 +51,7 @@ app.put("/editrecord/:id", async (req, res) => {
   }
 });
 
-app.delete("/deleterecord/:id", async (req, res) => {
+app.delete("https://yardstick-finance-tracker-2.onrender.com/deleterecord/:id", async (req, res) => {
     try {
         const deleterecord = await recordmodel.deleteOne({ _id: req.params.id });
 
