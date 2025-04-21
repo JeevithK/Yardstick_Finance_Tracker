@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
 
 const Recordedit = () => {
-  const BASE_URL = "https://yardstick-finance-tracker-2.onrender.com";
+  const BASE_URL = "https://finance-tracker-by-jk1.onrender.com";
   const [recdet, setrecdet] = useState({
     description: "",
     amount: "",
