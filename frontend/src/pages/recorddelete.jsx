@@ -12,7 +12,7 @@ const Recorddelete = () => {
     const fetchdata = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5001/getrecordbyid/${id}`
+          `https://finance-tracker-by-jk1.onrender.com//getrecordbyid/${id}`
         );
         setrecdet(res.data);
       } catch (err) {
@@ -25,7 +25,7 @@ const Recorddelete = () => {
   const handledelete = async (e) => {
     e.preventDefault();
     try {
-      await axios.delete(`http://localhost:5001/deleterecord/${id}`);
+      await axios.delete(`https://finance-tracker-by-jk1.onrender.com/deleterecord/${id}`);
       toast.success("Successfully Deleted the Expense!")
       
       setTimeout(()=>navigate("/"),2000);
