@@ -11,7 +11,7 @@ const Dashboard = () => {
     
     const fetchRecords = async () => {
       try {
-        const response = await axios.get("http://localhost:5001/getallrecord");
+        const response = await axios.get("https://finance-tracker-by-jk1.onrender.com//getallrecord");
         setrecords(response.data);
       } catch (err) {
         console.error("Error fetching records:", err);
