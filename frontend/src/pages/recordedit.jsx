@@ -21,7 +21,7 @@ const Recordedit = () => {
     const fetchdata = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5001/getrecordbyid/${id}`
+          `https://finance-tracker-by-jk1.onrender.com/getrecordbyid/${id}`
         );
         setrecdet(res.data);
         console.log(res.data);
@@ -46,7 +46,7 @@ const Recordedit = () => {
       const formatteddate = convertToDDMMYYYY(recdet.date);
       setrecdet((prev) => ({ ...prev, date: formatteddate }));
 
-      await axios.put(`http://localhost:5001/editrecord/${id}`, recdet)
+      await axios.put(`https://finance-tracker-by-jk1.onrender.com/editrecord/${id}`, recdet)
       toast.success("Successfully Added expense!");
       setTimeout(() => navigate("/"),2000);
       console.log("edited");
