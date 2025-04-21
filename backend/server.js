@@ -8,7 +8,13 @@ dotenv.config();
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+
+app.use(cors({
+  origin: "https://finance-tracker-by-jk1.onrender.com", // your frontend URL
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true,
+}));
+
 app.post("/createrecord", (req, res) => {
   const newrecord = recordmodel.create(req.body);
   res.status(202).json({ message: "Done Created the record" });
