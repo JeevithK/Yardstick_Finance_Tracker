@@ -47,7 +47,7 @@ const Recordedit = () => {
       const formatteddate = convertToDDMMYYYY(recdet.date);
       setrecdet((prev) => ({ ...prev, date: formatteddate }));
 
-      await axios.put(`${BASE_URL}//editrecord/${id}`, recdet)
+      await axios.put(`${BASE_URL}/editrecord/${id}`, recdet)
       toast.success("Successfully Added expense!");
       setTimeout(() => navigate("/"),2000);
       console.log("edited");
